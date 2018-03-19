@@ -1,0 +1,18 @@
+<form action="/form" method="post">
+    <div>
+        <input type="text" id="name" name="_csrf_token" value="<%= Plug.CSRFProtection.get_csrf_token() %>">
+    </div>
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name">
+    </div>
+
+    <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_mail">
+    </div>
+    <div class="button">
+        <button type="submit">Send your message</button>
+    </div>
+</form>
